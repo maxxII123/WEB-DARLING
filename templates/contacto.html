@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Blush Bar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contacto.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Blush Bar</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Inicio</a></li>
+                    <li><a href="{{ url_for('productos') }}">Productos</a></li>
+                    <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+                    <li><a href="#carrito">Carrito (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="contacto" class="container">
+            <h2>Contacto</h2>
+            <form id="contactForm">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Blush Bar. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+<script src="{{ url_for('static', filename='js/contacto.js') }}"></script>
+</html>

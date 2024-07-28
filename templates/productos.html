@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Blush Bar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/producto.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Blush Bar</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Inicio</a></li>
+                    <li><a href="{{ url_for('productos') }}">Productos</a></li>
+                    <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+                    <li><a href="#carrito">Carrito (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </nav>
+            <div class="cart">
+                <a href="#" onclick="toggleCart()">Carrito (<span id="cart-count">0</span>)</a>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <section id="productos">
+            <h2>Productos Destacados</h2>
+            <div class="products-grid">
+                <div class="product" data-id="1" data-name="Labial Rojo" data-price="9.99">
+                    <img src="images/product1.jpg" alt="Producto 1" />
+                    <h3>Labial Rojo</h3>
+                    <p>Un labial de larga duración con un color vibrante.</p>
+                    <button onclick="addToCart(this)">Agregar al carrito</button>
+                </div>
+                <div class="product" data-id="2" data-name="Sombra de Ojos" data-price="19.99">
+                    <img src="images/product2.jpg" alt="Producto 2" />
+                    <h3>Sombra de Ojos</h3>
+                    <p>Paleta de sombras con colores intensos y duraderos.</p>
+                    <button onclick="addToCart(this)">Agregar al carrito</button>
+                </div>
+                <div class="product" data-id="3" data-name="Base de Maquillaje" data-price="29.99">
+                    <img src="images/product3.jpg" alt="Producto 3" />
+                    <h3>Base de Maquillaje</h3>
+                    <p>Base líquida para un acabado perfecto.</p>
+                    <button onclick="addToCart(this)">Agregar al carrito</button>
+                </div>
+            </div>
+        </section>
+        <section id="cart" class="hidden">
+            <h2>Carrito de Compras</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Blush Bar. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/producto.js') }}"></script>
+</body>
+</html>
