@@ -28,19 +28,19 @@
             <h2>Productos Destacados</h2>
             <div class="products-grid">
                 <div class="product" data-id="1" data-name="Labial Rojo" data-price="9.99">
-                    <img src="images/product1.jpg" alt="Producto 1" />
+                    <img src="{{ url_for('static', filename='img/img7.jpg') }}" alt="Producto 1" />
                     <h3>Labial Rojo</h3>
                     <p>Un labial de larga duración con un color vibrante.</p>
                     <button onclick="addToCart(this)">Agregar al carrito</button>
                 </div>
                 <div class="product" data-id="2" data-name="Sombra de Ojos" data-price="19.99">
-                    <img src="images/product2.jpg" alt="Producto 2" />
+                    <img src="{{ url_for('static', filename='img/img8.jpg') }}" alt="Producto 2" />
                     <h3>Sombra de Ojos</h3>
                     <p>Paleta de sombras con colores intensos y duraderos.</p>
                     <button onclick="addToCart(this)">Agregar al carrito</button>
                 </div>
                 <div class="product" data-id="3" data-name="Base de Maquillaje" data-price="29.99">
-                    <img src="images/product3.jpg" alt="Producto 3" />
+                    <img src="{{ url_for('static', filename='img/img9.jpg') }}" alt="Producto 3" />
                     <h3>Base de Maquillaje</h3>
                     <p>Base líquida para un acabado perfecto.</p>
                     <button onclick="addToCart(this)">Agregar al carrito</button>
